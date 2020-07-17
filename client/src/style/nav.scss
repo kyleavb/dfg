@@ -1,0 +1,67 @@
+hr{
+    width: 80%;
+    border-top: 1px solid black;
+}
+
+.navLogo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    h1{
+        font-size: 5em;
+        margin: 0;
+    }
+    span{
+        margin-right: 10px;
+        padding: 1px 5px;
+        font-size: 1.5em;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+        background-color: black;
+    }
+}
+.logoTag{
+    font-size: small;
+    font-style: italic;
+}
+
+.navBar{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    .fullButton{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .vert{
+            display: block;
+            margin: 0 15px;
+            border-right:1px solid black; 
+            height: 40px;
+        }
+    }
+}
+
+.navButton{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;  
+}
+.subMenu{
+    position: relative;
+    display: flex;
+    width: 150px;
+    justify-items: center;
+    flex-direction: column;
+    background-color: rgb(29, 49, 49);
+  }
+
+.hide{
+    display: none;
+}
