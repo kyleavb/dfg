@@ -6,6 +6,7 @@ import NavBar from './major/NavBar';
 import Landing from './major/Landing';
 import Post from './major/Post';
 import Login from './major/Login';
+import Search from './major/Search';
 import './style/main.scss'
 
 ReactDOM.render(
@@ -17,6 +18,7 @@ ReactDOM.render(
 					<Route exact path='/' render={ (props) => <Landing {...props} /> } />
 					<Route path='/story/*' render={ (props) => <Post {...props} /> } />
 					<Route exact path='/login' render={ (props) => <Login {...props} /> } />
+					<Route exact path='/search' render={ (props) => <Search {...props} /> } />
 				</Switch>
 			</Router>
 		</div>
