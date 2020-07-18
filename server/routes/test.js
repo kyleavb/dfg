@@ -14,7 +14,6 @@ router.post( '/', (req, res) => {
 
 router.post ( '/1', async (req, res) => {
     let {title, body} = req.body;
-    
     const [post, created] = await db.Post.findOrCreate({
         where: {title: title},
         defaults:{
