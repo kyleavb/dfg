@@ -1,34 +1,45 @@
 const router = require('express').Router();
-const db = require( '../models' );
+const Lerg = require('../models/Post');
 
 router.post( '/', (req, res) => {
     console.log(req.body);
-    let {title, body} = req.body;
-    db.Post.create({
-        title: title,
-        body: body
-    }).then( post => {
-        res.send([post.title, post.body]);
-    });
+    // let {title, body} = req.body;
+    // db.posts.create({
+    //     title: title,
+    //     body: body
+    // }).then( post => {
+    //     res.send([post.title, post.body]);
+    // });
 });
 
 router.post ( '/1', async (req, res) => {
-    let {title, body} = req.body;
-    const [post, created] = await db.Post.findOrCreate({
-        where: {title: title},
-        defaults:{
-            title: title,
-            id: 394058
-        }
-    })
-    console.log(`--------------------${created}-------------------------`)
-    if( created ){
-        console.log('MADE IT MAN');
-        res.send(post);
-    }else{
-        console.log( 'SHIT ALREADY EXISTS!' )
-        res.send(post);
-    }
+    console.log('------------START------------');
+    Lerg.findAll().then( retPost => {
+        // console.log(retPost);
+        res.send(retPost);
+    }).catch( err => console.log(err))
+    
+    
+    
+    // let {title, body} = req.body;
+    // console.log(`title: ${title}`)
+    // const [post, created] = await Lerg.findOrCreate({
+    //     where: {title: title},
+    //     defaults:{
+    //         title: title,
+    //         body: body
+    //     }
+    // })
+    // .catch( (e) => {
+    //     console.log(`-------Error: ${e}`);
+    // })
+    // if( created ){
+    //     console.log('MADE IT MAN');
+    //     res.send(post);
+    // }else{
+    //     console.log( 'SHIT ALREADY EXISTS!' )
+    //     res.send(post);
+    // }
 });
 
 module.exports = router;

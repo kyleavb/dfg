@@ -4,5 +4,5 @@ module.exports = {
     "DB_PASS" : process.env.DB_PASS || null,
     "DB_NAME" : process.env.DB_NAME || null,
     "DB_HOST" : process.env.DB_HOST || null,
-    "DB_TYPE" : process.env.DB_TYPE || null,
+    "DB_TYPE" : process.env.DB_TYPE || 'postgres',
 }

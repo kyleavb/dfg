@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from "react-router-dom";
 import axios from 'axios';
 
 class Search extends Component{
@@ -17,8 +18,9 @@ class Search extends Component{
     onSubmit = (e) => {
         e.preventDefault();
         console.log(this.state);
-        axios.post( '/test/1', this.state).then( (data) => {
-            console.log(data)
+        axios.post( '/t(est/1', this.state).then( (res) => {
+            console.log('dope')
+            console.log(res.data)
         })
     };
 
