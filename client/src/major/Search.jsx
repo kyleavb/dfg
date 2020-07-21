@@ -16,12 +16,7 @@ class Search extends Component{
     };
 
     onSubmit = (e) => {
-        e.preventDefault();
-        console.log(this.state);
-        axios.post( '/t(est/1', this.state).then( (res) => {
-            console.log('dope')
-            console.log(res.data)
-        })
+
     };
 
     render(){

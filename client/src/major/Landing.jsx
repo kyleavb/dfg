@@ -3,33 +3,16 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import Hero from '../minor/hero';
 import '../style/landing.scss'
-import mainData from '../data/main.json';
+import mainData from '../data/main';
 class Landing extends Component{
 
     state={
         heroData: ""
     }
 
-    // const getConfigurableProps = () => ({
-    //     showArrows: boolean('showArrows', true, tooglesGroupId),
-    //     showStatus: boolean('showStatus', true, tooglesGroupId),
-    //     showIndicators: boolean('showIndicators', true, tooglesGroupId),
-    //     infiniteLoop: boolean('infiniteLoop', true, tooglesGroupId),
-    //     showThumbs: boolean('showThumbs', true, tooglesGroupId),
-    //     useKeyboardArrows: boolean('useKeyboardArrows', true, tooglesGroupId),
-    //     autoPlay: boolean('autoPlay', true, tooglesGroupId),
-    //     stopOnHover: boolean('stopOnHover', true, tooglesGroupId),
-    //     swipeable: boolean('swipeable', true, tooglesGroupId),
-    //     dynamicHeight: boolean('dynamicHeight', true, tooglesGroupId),
-    //     emulateTouch: boolean('emulateTouch', true, tooglesGroupId),
-    //     thumbWidth: number('thumbWidth', 100, {}, valuesGroupId),
-    //     selectedItem: number('selectedItem', 0, {}, valuesGroupId),
-    //     interval: number('interval', 3000, {}, valuesGroupId),
-    //     transitionTime: number('transitionTime', 150, {}, valuesGroupId),
-    //     swipeScrollTolerance: number('swipeScrollTolerance', 5, {}, valuesGroupId),
-    // });
+    
     componentDidMount(){
-        //To be replaced by either API call OR grab data from context 
+        //To be replaced by either API call OR grab data from context
         this.setState({ heroData: mainData.hero});
     }
 
@@ -45,9 +28,15 @@ class Landing extends Component{
         let heroRender = this.state.heroData ? this.renderHero() : [];
         return(
             <div className="landingMain">
-                <Carousel autoplay showThumbs={false}>
+                <Carousel 
+                    autoPlay
+                    infiniteLoop
+                    interval={5000}
+                    showThumbs={false}
+                >
                     {heroRender}
                 </Carousel>
+                {/* <Test /> */}
             </div>
         )
     }

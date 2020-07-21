@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import NavItem from '../minor/NavItem'
-import menuData from '../data/main.json'
+import menuData from '../data/main'
 import '../style/nav.scss'
 
 class NavBar extends Component {
@@ -23,12 +24,14 @@ class NavBar extends Component {
         return(
             <div className="navContainer">
                 <div className="logoContainer">
-                    <hr />
-                    <div className="navLogo">
-                        <span>The</span>
-                        <h1>Disney Field Guide</h1>
-                        <br/>
-                    </div>  
+                    <hr />    
+                    <Link to='/'>
+                        <div className="navLogo">
+                                <span>The</span>
+                                <h1>Disney Field Guide</h1>
+                                <br/>
+                        </div>  
+                    </Link>
                     <span className="logoTag">Now with more guide!</span>
                     <hr />
                 </div>

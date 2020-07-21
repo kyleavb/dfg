@@ -2,13 +2,19 @@ hr{
     width: 80%;
     border-top: 1px solid black;
 }
-
+.logoContainer{
+    a{
+        color: inherit; /* blue colors for links too */
+        text-decoration: inherit; /* no underline */
+    }
+}
 .navLogo{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    
     h1{
         font-size: 5em;
         margin: 0;

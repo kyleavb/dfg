@@ -1,14 +1,14 @@
-// .hero{
-//     height: 45vh;
-//     width: 100vw; 
-//     position: relative;
-//     img{
-//         width: auto;
-//         height: 100%;
-//     }
+.hero{
+    height: 45vh;
+    width: 100vw; 
+    position: relative;
+    img{
+        max-width: auto;
+        height: 100%; 
+    }
 
     
-// }
+}
 
 .heroText{
     position: absolute;
