@@ -5,12 +5,8 @@ module.exports={
             "loc": "/"
         },
         {
-            "title": "Login",
-            "loc": "/login"
-        },
-        {
-            "title": "Sign up",
-            "loc": "/"
+            "title": "Blog",
+            "loc": "/blog"
         },
         {
             "title": "Search",

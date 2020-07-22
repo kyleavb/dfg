@@ -14,32 +14,32 @@ router.post( '/', (req, res) => {
 
 router.post ( '/1', async (req, res) => {
     console.log('------------START------------');
-    Lerg.findAll().then( retPost => {
-        // console.log(retPost);
-        res.send(retPost);
-    }).catch( err => console.log(err))
+    // Lerg.findAll().then( retPost => {
+    //     // console.log(retPost);
+    //     res.send(retPost);
+    // }).catch( err => console.log(err))
     
     
     
-    // let {title, body} = req.body;
-    // console.log(`title: ${title}`)
-    // const [post, created] = await Lerg.findOrCreate({
-    //     where: {title: title},
-    //     defaults:{
-    //         title: title,
-    //         body: body
-    //     }
-    // })
-    // .catch( (e) => {
-    //     console.log(`-------Error: ${e}`);
-    // })
-    // if( created ){
-    //     console.log('MADE IT MAN');
-    //     res.send(post);
-    // }else{
-    //     console.log( 'SHIT ALREADY EXISTS!' )
-    //     res.send(post);
-    // }
+    let {title, body} = req.body;
+    console.log(`title: ${title}`)
+    const [post, created] = await Lerg.findOrCreate({
+        where: {title: title},
+        defaults:{
+            title: title,
+            body: body
+        }
+    })
+    .catch( (e) => {
+        console.log(`-------Error: ${e}`);
+    })
+    if( created ){
+        console.log('MADE IT MAN');
+        res.send(post);
+    }else{
+        console.log( 'SHIT ALREADY EXISTS!' )
+        res.send(post);
+    }
 });
 
 module.exports = router;

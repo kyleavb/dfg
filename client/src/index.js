@@ -5,6 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import NavBar from './major/NavBar';
 import Landing from './major/Landing';
 import Post from './major/Post';
+import Blog from './major/Blog'
 import Login from './major/Login';
 import Search from './major/Search';
 import './style/main.scss'
@@ -17,7 +18,7 @@ ReactDOM.render(
 				<Switch>
 					<Route exact path='/' render={ (props) => <Landing {...props} /> } />
 					<Route path='/story/*' render={ (props) => <Post {...props} /> } />
-					<Route exact path='/login' render={ (props) => <Login {...props} /> } />
+					<Route exact path='/blog' render={ (props) => <Blog {...props} /> } />
 					<Route exact path='/search' render={ (props) => <Search {...props} /> } />
 				</Switch>
 			</Router>

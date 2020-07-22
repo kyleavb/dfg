@@ -22,7 +22,7 @@ class Post extends Component{
     render(){
         return(
             <div>
-                <h1>Blog Post {this.state.title}</h1>
+                <h1>{this.state.title}</h1>
                 <p>{this.state.body}</p>
             </div>
         )

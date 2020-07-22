@@ -16,7 +16,13 @@ class Search extends Component{
     };
 
     onSubmit = (e) => {
-
+    
+        axios.post('/test/1', {
+            title: this.state.title,
+            body: this.state.body
+        }).then( dat => {
+            console.log(dat)
+        })
     };
 
     render(){

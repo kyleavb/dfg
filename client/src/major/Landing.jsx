@@ -36,7 +36,7 @@ class Landing extends Component{
                 >
                     {heroRender}
                 </Carousel>
-                {/* <Test /> */}
+
             </div>
         )
     }
